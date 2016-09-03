@@ -1,0 +1,14 @@
+<li>
+<span class="content">
+  <%= link_to idea.question, idea %>
+  <% if current_user.admin? %>
+    | <%= link_to "delete",idea,  method: :delete ,
+                                  data: { confirm: "You sure?" } %>
+  <% end %>
+  </span>
+  <br>
+
+  <span class="stamp">
+    Posted <%= time_ago_in_words(idea.created_at) %> ago.
+  </span>
+</li>

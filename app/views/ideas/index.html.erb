@@ -1,0 +1,11 @@
+<% provide(:title, 'All Ideas') %>
+<center><h3><%= link_to "Add New Idea", new_idea_path %></h3></center>
+<h1>All Ideas</h1>
+
+<%= will_paginate %>
+
+<ul class="users">
+  <%= render @ideas %>
+</ul>
+
+<%= will_paginate %>

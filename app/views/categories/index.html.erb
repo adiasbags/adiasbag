@@ -1,0 +1,13 @@
+<% provide(:title, 'All Category') %>
+<% if current_user.admin? %>
+<center><h3><%= link_to "Add New Category", new_category_path %></h3></center>
+<% end %>
+<h1>All Category</h1>
+<%= will_paginate %>
+
+<ul class="users">
+  <%= render @categories %>
+</ul>
+
+<%= will_paginate %>
+
